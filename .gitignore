@@ -1,0 +1,6 @@
+build/
+components/rust/target/
+components/rust/tmp/
+components/rust/src/rust_build-build
+components/rust/src/rust_build-stamp/
+sdkconfig

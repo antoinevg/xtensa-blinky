@@ -1,0 +1,12 @@
+RUST_XTENSA=/mnt/flowdsp/deps/versions/rust-xtensa
+DOT_ESPRESSIF=~/.espressif
+
+RUST_HOME=$RUST_XTENSA/rustc_build
+RUST_SOURCES=$RUST_XTENSA/rust-xtensa.git
+LINKER=$DOT_ESPRESSIF/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc
+
+export PATH=$RUST_HOME/bin:$PATH
+export RUST_BACKTRACE=1
+export XARGO_RUST_SRC=$RUST_SOURCES/src
+#export RUSTC=$RUST_SOURCES/build/x86_64-apple-darwin/stage2/bin/rustc
+export RUSTC=$RUST_HOME/bin/rustc
