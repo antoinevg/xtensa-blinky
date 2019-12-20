@@ -1,13 +1,16 @@
 PROJECT_NAME := blinky
 
+DEVICE=/dev/cu.SLAB_USBtoUART
+
+
 all: build
 
 build:
 		ulimit -n 1024 && idf.py build
 
 flash:
-		ulimit -n 1024 && idf.py -p /dev/cu.SLAB_USBtoUART flash &&	\
-		idf.py -p /dev/cu.SLAB_USBtoUART monitor
+		ulimit -n 1024 && idf.py -p $(DEVICE) flash &&	\
+		idf.py -p $(DEVICE) monitor
 
 clean:
 	rm -rf build/
