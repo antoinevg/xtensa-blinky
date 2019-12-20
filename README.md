@@ -2,7 +2,7 @@ Like this:
 
     # activate esp-idf environment
     export IDF_PATH=/path/to/esp-idf
-    . ./$IDF_PATH/export.sh
+    . $IDF_PATH/export.sh
 
     # activate rust-xtensa environment
     . ./setenv
